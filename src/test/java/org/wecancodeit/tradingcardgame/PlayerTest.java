@@ -39,4 +39,13 @@ public class PlayerTest {
 		assertThat(underTest.getManaSlots(), is(1));
 	}
 
+	@Test
+	public void playerShouldNotGoOverTenManaSlots() {
+		underTest = new Player(30, 10);
+
+		underTest.gainManaSlot();
+
+		assertThat(underTest.getManaSlots(), is(10));
+	}
+
 }
