@@ -55,4 +55,13 @@ public class PlayerTest {
 		assertThat(underTest.getCurrentMana(), is(0));
 	}
 
+	@Test
+	public void playerShouldNotBeAbleToSpendMoreManaThanIsAvailable() {
+		underTest = new Player(30, 3);
+
+		underTest.spendMana(4);
+
+		assertThat(underTest.getCurrentMana(), is(3));
+	}
+
 }
