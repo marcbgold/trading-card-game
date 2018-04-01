@@ -1,5 +1,7 @@
 package org.wecancodeit.tradingcardgame;
 
+import java.util.Stack;
+
 public class Player {
 
 	private int hp;
@@ -45,4 +47,7 @@ public class Player {
 		currentMana = manaSlots;
 	}
 
+	public Stack<Integer> getCardDeck() {
+		return null;
+	}
 }
