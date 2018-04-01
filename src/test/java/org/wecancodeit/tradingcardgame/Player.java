@@ -24,7 +24,9 @@ public class Player {
 	}
 
 	public void gainManaSlot() {
-		manaSlots++;
+		if (manaSlots < 10) {
+			manaSlots++;
+		}
 	}
 
 }
