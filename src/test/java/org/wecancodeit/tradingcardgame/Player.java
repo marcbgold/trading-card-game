@@ -4,10 +4,12 @@ public class Player {
 
 	private int hp;
 	private int manaSlots;
+	private int currentMana;
 
 	public Player(int hp, int manaSlots) {
 		this.hp = hp;
 		this.manaSlots = manaSlots;
+		currentMana = manaSlots;
 	}
 
 	public int getHp() {
@@ -16,6 +18,10 @@ public class Player {
 
 	public int getManaSlots() {
 		return manaSlots;
+	}
+
+	public int getCurrentMana() {
+		return currentMana;
 	}
 
 	public void takeDamage(int amount) {
@@ -27,6 +33,10 @@ public class Player {
 		if (manaSlots < 10) {
 			manaSlots++;
 		}
+	}
+
+	public void spendMana(int amount) {
+		currentMana -= amount;
 	}
 
 }
