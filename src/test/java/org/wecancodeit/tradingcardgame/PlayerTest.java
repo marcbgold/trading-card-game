@@ -12,7 +12,7 @@ public class PlayerTest {
 
 	@Before
 	public void setup() {
-		underTest = new Player(30, 0);
+		underTest = new Player(30, 1);
 	}
 
 	@Test
@@ -29,14 +29,14 @@ public class PlayerTest {
 
 	@Test
 	public void playerShouldHaveManaSlots() {
-		assertThat(underTest.getManaSlots(), is(0));
+		assertThat(underTest.getManaSlots(), is(1));
 	}
 
 	@Test
 	public void playerShouldGainOneManaSlot() {
 		underTest.gainManaSlot();
 
-		assertThat(underTest.getManaSlots(), is(1));
+		assertThat(underTest.getManaSlots(), is(2));
 	}
 
 	@Test
@@ -46,6 +46,13 @@ public class PlayerTest {
 		underTest.gainManaSlot();
 
 		assertThat(underTest.getManaSlots(), is(10));
+	}
+
+	@Test
+	public void playerShouldSpendAvailableMana() {
+		underTest.spendMana(1);
+
+		assertThat(underTest.getCurrentMana(), is(0));
 	}
 
 }
