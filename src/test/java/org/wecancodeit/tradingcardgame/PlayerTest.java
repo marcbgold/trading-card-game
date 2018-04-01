@@ -12,12 +12,12 @@ public class PlayerTest {
 
 	@Before
 	public void setup() {
-		underTest = new Player(30);
+		underTest = new Player(30, 0);
 	}
 
 	@Test
 	public void playerShouldHaveHp() {
-		underTest = new Player(30);
+		underTest = new Player(30, 0);
 
 		assertThat(underTest.getHp(), is(30));
 	}
