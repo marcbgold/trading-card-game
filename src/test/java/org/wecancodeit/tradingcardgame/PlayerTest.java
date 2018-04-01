@@ -82,15 +82,36 @@ public class PlayerTest {
 
 	@Test
 	public void playerCardDeckShouldStartWithCardsInIt() {
-		assertThat(underTest.getCardDeck().size(), is(3));
+		underTest = new Player(30, 3, 1);
+
+		assertThat(underTest.getCardDeck().size(), is(1));
 	}
 
 	@Test
 	public void playerShouldDrawCardFromTopOfDeckAndPlaceInHand() {
+		underTest = new Player(30, 3, 1);
+
 		underTest.drawCard();
 
 		assertThat(underTest.getCardDeck(), not(contains(1)));
 		assertThat(underTest.getHand(), contains(1));
 	}
+
+	@Test
+	public void playerShouldNotDrawFromEmptyDeck() {
+		underTest.drawCard();
+
+		assertThat(underTest.getCardDeck().size(), is(0));
+	}
+
+	// @Test
+	// public void playerShouldDiscardDrawnCardIfHandSizeIs5() {
+	// underTest = new Player(30, 3, 1);
+	//
+	// underTest.drawCard();
+	//
+	// assertThat(underTest.getCardDeck(), not(contains(1)));
+	// assertThat(underTest.getHand(), contains(1));
+	// }
 
 }

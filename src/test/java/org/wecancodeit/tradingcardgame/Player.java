@@ -13,11 +13,11 @@ public class Player {
 	private LinkedList<Integer> cardDeck;
 	private Collection<Integer> hand;
 
-	public Player(int hp, int manaSlots) {
+	public Player(int hp, int manaSlots, Integer... cards) {
 		this.hp = hp;
 		this.manaSlots = manaSlots;
 		currentMana = manaSlots;
-		cardDeck = new LinkedList<Integer>(Arrays.asList(1, 2, 3));
+		cardDeck = new LinkedList<Integer>(Arrays.asList(cards));
 		hand = new ArrayList<Integer>();
 	}
 
