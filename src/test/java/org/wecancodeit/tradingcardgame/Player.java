@@ -36,7 +36,9 @@ public class Player {
 	}
 
 	public void spendMana(int amount) {
-		currentMana -= amount;
+		if (currentMana >= amount) {
+			currentMana -= amount;
+		}
 	}
 
 }
