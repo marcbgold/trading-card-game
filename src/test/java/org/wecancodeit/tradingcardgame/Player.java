@@ -12,4 +12,9 @@ public class Player {
 		return hp;
 	}
 
+	public void takeDamage(int amount) {
+		hp -= amount;
+
+	}
+
 }
