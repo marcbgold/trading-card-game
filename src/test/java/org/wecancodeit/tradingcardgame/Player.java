@@ -1,5 +1,6 @@
 package org.wecancodeit.tradingcardgame;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 
 public class Player {
@@ -13,7 +14,7 @@ public class Player {
 		this.hp = hp;
 		this.manaSlots = manaSlots;
 		currentMana = manaSlots;
-		cardDeck = new LinkedList<Integer>();
+		cardDeck = new LinkedList<Integer>(Arrays.asList(1, 2, 3));
 	}
 
 	public int getHp() {
