@@ -23,4 +23,8 @@ public class Player {
 
 	}
 
+	public void gainManaSlot() {
+		manaSlots++;
+	}
+
 }
