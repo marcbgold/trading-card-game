@@ -29,4 +29,11 @@ public class PlayerTest {
 		assertThat(underTest.getHp(), is(29));
 	}
 
+	@Test
+	public void playerShouldHaveManaSlots() {
+		underTest = new Player(30, 0);
+
+		assertThat(underTest.getManaSlots(), is(0));
+	}
+
 }
