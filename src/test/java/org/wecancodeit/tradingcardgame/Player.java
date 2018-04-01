@@ -63,8 +63,10 @@ public class Player {
 	}
 
 	public void drawCard() {
-		int card = cardDeck.pop();
-		hand.add(card);
+		if (cardDeck.size() > 0) {
+			int card = cardDeck.pop();
+			hand.add(card);
+		}
 	}
 
 }
