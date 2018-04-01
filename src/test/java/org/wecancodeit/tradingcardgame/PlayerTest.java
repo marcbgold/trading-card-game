@@ -17,8 +17,6 @@ public class PlayerTest {
 
 	@Test
 	public void playerShouldHaveHp() {
-		underTest = new Player(30, 0);
-
 		assertThat(underTest.getHp(), is(30));
 	}
 
@@ -31,9 +29,14 @@ public class PlayerTest {
 
 	@Test
 	public void playerShouldHaveManaSlots() {
-		underTest = new Player(30, 0);
-
 		assertThat(underTest.getManaSlots(), is(0));
+	}
+
+	@Test
+	public void playerShouldGainOneManaSlot() {
+		underTest.gainManaSlot();
+
+		assertThat(underTest.getManaSlots(), is(1));
 	}
 
 }
