@@ -1,7 +1,6 @@
 package org.wecancodeit.tradingcardgame;
 
 import static org.hamcrest.CoreMatchers.is;
-import static org.hamcrest.Matchers.not;
 import static org.junit.Assert.assertThat;
 
 import org.junit.Before;
@@ -74,8 +73,8 @@ public class PlayerTest {
 	}
 
 	@Test
-	public void playerShouldHaveCardsInDeck() {
-		assertThat(underTest.getCardDeck(), is(not(null)));
+	public void playerShouldHaveCardDeck() {
+		assertThat(underTest.getCardDeck().size(), is(0));
 	}
 
 }
