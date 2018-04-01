@@ -1,1 +1,1 @@
-# trading-card-game
+# Trading card game kata
