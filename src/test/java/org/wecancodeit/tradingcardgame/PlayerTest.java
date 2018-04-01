@@ -64,4 +64,12 @@ public class PlayerTest {
 		assertThat(underTest.getCurrentMana(), is(3));
 	}
 
+	@Test
+	public void playerShouldRefillCurrentManaToMatchManaSlots() {
+		underTest.spendMana(1);
+		underTest.refillMana();
+
+		assertThat(underTest.getCurrentMana(), is(1));
+	}
+
 }
