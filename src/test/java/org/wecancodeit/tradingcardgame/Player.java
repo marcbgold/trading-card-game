@@ -33,6 +33,10 @@ public class Player {
 		return cardDeck;
 	}
 
+	public Object getHand() {
+		return null;
+	}
+
 	public void takeDamage(int amount) {
 		hp -= amount;
 
@@ -52,6 +56,10 @@ public class Player {
 
 	public void refillMana() {
 		currentMana = manaSlots;
+	}
+
+	public void drawCard() {
+
 	}
 
 }

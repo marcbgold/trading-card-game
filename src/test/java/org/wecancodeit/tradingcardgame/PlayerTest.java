@@ -1,6 +1,7 @@
 package org.wecancodeit.tradingcardgame;
 
 import static org.hamcrest.CoreMatchers.is;
+import static org.hamcrest.Matchers.contains;
 import static org.hamcrest.Matchers.greaterThanOrEqualTo;
 import static org.junit.Assert.assertThat;
 
@@ -81,6 +82,13 @@ public class PlayerTest {
 	@Test
 	public void playerCardDeckShouldStartWithCardsInIt() {
 		assertThat(underTest.getCardDeck().size(), is(3));
+	}
+
+	@Test
+	void playerShouldDrawCardFromTopOfDeckAndPlaceInHand() {
+		underTest.drawCard();
+
+		assertThat(underTest.getHand(), contains(3));
 	}
 
 }
