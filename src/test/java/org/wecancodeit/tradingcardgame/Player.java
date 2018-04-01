@@ -42,7 +42,7 @@ public class Player {
 	}
 
 	public void refillMana() {
-
+		currentMana = manaSlots;
 	}
 
 }
